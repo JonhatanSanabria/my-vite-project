@@ -1,68 +1,173 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
+  
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+    background-color: black;
+    color: aliceblue;
+    font-family: "Schibsted Grotesk", sans-serif;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+#main-layout {
+    width: 100%;
+    min-height: 100vh;
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: 3.2rem 1fr;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+#navbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    align-items: center;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+#image-logo {
+    width: 35px;
+    padding-right: 10px;
 }
+
+#search-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#search-container input {
+    width: 100%;
+    padding: 0.5rem 1rem;
+    border: 1px solid #282828;
+    border-radius: 1rem;
+    background-color: transparent;
+}
+
+#user-icon {
+    width: 100px;
+    display: flex;
+    justify-content: flex-end
+}
+
+#menu-list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+
+.main{
+    display: flex;
+    flex-direction: row;
+    padding: 120px 60px 60px 60px;
+    justify-content: space-evenly;
+  }
+  
+  .main-info {
+    max-width: 600px;
+  }
+  
+  .main h1{
+    color: transparent;
+    line-height: 60px;
+    font-size: 50px;
+  }
+  
+  
+  .main .text{
+    line-height: 70px;
+    font-size: 60px;
+    color: #fff;
+  }
+  
+  .main .tagline{
+    color: rgba(235, 235, 245, .6);
+    line-height: 36px;
+    font-size: 24px;
+  }
+  
+  .vite{
+    background: -webkit-linear-gradient( 120deg, #bd34fe 25%, #41d1ff );;
+    -webkit-background-clip: text;
+    background-clip: text;
+  }
+  
+  .logo img {
+    max-width: 320px;
+    max-height: 320px;
+  }
+  
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; 
+    gap: 20px;
+  }
+  
+  .card {
+    display: flex;
+    flex: 1 1 calc(33.333% - 20px); 
+    box-sizing: border-box; 
+    padding: 24px;
+    border-radius: 10px;
+    text-align: center;
+    margin-bottom: 20px;
+    align-items: flex-start;
+    flex-direction: column;
+    background-color: #202127;
+    height: 30vh;
+  }
+  
+  .card .icons{
+    background-color: #2B2F36;
+    display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      width: 48px;
+      height: 48px;
+      font-size: 24px;
+      transition: background-color .25s;
+      padding: 10px 5px;
+  }
+  
+  .card .text{
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 600;
+  }
+  
+  .card .tagline{
+    padding-top: 8px;
+      line-height: 24px;
+      font-size: 14px;
+      font-weight: 500;
+      text-align: start;
+  }
+  
+  .tabs{
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+  }
+  
+  .tab {
+    color: wheat;
+    background: #41454d;
+    padding: 6px;
+    border-radius: 50px;
+  }
+  
+  .tab p{
+    text-decoration: none;
+    color: white;
+    padding: 0 20px;
+    line-height: 38px;
+  
+  }
+  
+  .tabs .tab:first-child , .tabs .tab:last-child {
+    background-color: #646CFF; 
+  }
